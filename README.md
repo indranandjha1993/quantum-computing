@@ -25,6 +25,29 @@ objects used throughout, and links to every module.
 Each module has learning objectives, "what to notice" callouts after every experiment,
 interactive sliders where they help, exercises with hidden solutions, and key takeaways.
 
+## Interactive labs
+
+Four simulators live in `src/qclab/` and are wired into the modules. Each needs a running kernel; when the
+notebooks are viewed statically they show a preview of the initial state instead.
+
+| Lab | Used in | What you do |
+|-----|---------|-------------|
+| Bloch Sphere Lab | Modules 1, 2 | Press gates and watch the arrow move along its rotation path. Shows amplitudes, angles, the running matrix, and fidelity to an optional target. |
+| Circuit Composer | Start Here, Modules 2, 3 | Build circuits on 1 to 4 qubits from a gate menu. Live drawing, phase-coloured amplitudes, sampled histogram, per-qubit purity and Bloch arrows. Example circuits included. |
+| Guess the State | Modules 1, 4 | A hidden qubit and a shot budget. Measure in Z, X or Y, then guess the state. Easy mode uses the six axis states, hard mode any point on the sphere. |
+| Checkpoint quiz | every module | Four questions per module with instant feedback and explanations. |
+
+```python
+from qclab import bloch_lab, circuit_composer, guess_the_state, quiz
+bloch_lab(target='-')                      # reach |-> from |0>
+circuit_composer(3, example='ghz')
+guess_the_state('hard', budget=300)
+quiz(4)
+```
+
+The import works because Jupyter starts a notebook's kernel in the notebook's own folder. If you run a notebook
+from elsewhere, add `src/` to `sys.path` first.
+
 ## Setup
 
 Requires Python 3.13 and [uv](https://docs.astral.sh/uv/).
