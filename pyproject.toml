@@ -1,0 +1,14 @@
+[project]
+name = "quantum-computing"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Indra Nand Jha", email = "indranandjha0@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
