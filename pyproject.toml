@@ -1,13 +1,20 @@
 [project]
 name = "quantum-computing"
 version = "0.1.0"
-description = "Add your description here"
+description = "Hands-on learning notebooks for quantum computing: Qiskit circuits, Bloch-sphere visuals, and Aer simulations"
 readme = "README.md"
 authors = [
     { name = "Indra Nand Jha", email = "indranandjha0@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "ipywidgets>=8.1.9",
+    "matplotlib>=3.11.1",
+    "pylatexenc>=2.11",
+    "qiskit>=2.5.2",
+    "qiskit-aer>=0.17.2",
+    "sympy>=1.14.0",
+]
 [dependency-groups]
 dev = [
     "ipykernel>=7.3.0",
