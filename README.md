@@ -1,0 +1,52 @@
+# Quantum Computing with Code
+
+A hands-on, nine-notebook course in quantum computing. Every idea is introduced three ways:
+as an **analogy**, as **maths**, and as **Qiskit code** you run, visualise and modify.
+Circuits are drawn, states are plotted on Bloch spheres, and everything is simulated with
+shot statistics on the Aer simulator, including a noisy simulated device in the final module.
+
+## Course map
+
+Start with `src/00_Start_Here.ipynb`: it checks your environment, introduces the four Qiskit
+objects used throughout, and links to every module.
+
+| # | Notebook | What you learn |
+|---|----------|----------------|
+| 0 | `00_Start_Here` | Setup check, the four Qiskit objects, conventions, cheat sheets, glossary |
+| 1 | `01_The_Qubit_and_Superposition` | Amplitudes, Dirac notation, Bloch sphere, measurement, first circuit |
+| 2 | `02_Quantum_Logic_Gates` | Gates as rotations, Pauli X/Y/Z, Hadamard, RY/RZ, circuits as matrix products |
+| 3 | `03_Multiple_Qubits_and_Entanglement` | Tensor products, bit ordering, CNOT, Bell & GHZ states, a purity test for entanglement |
+| 4 | `04_Measurement_and_Interference` | Born rule, shot noise, measurement bases, a quantum interferometer |
+| 5 | `05_Quantum_Teleportation` | No-cloning, the protocol, deferred measurement vs real feed-forward, fidelity checks |
+| 6 | `06_Deutsch_Jozsa_Algorithm` | Oracles, phase kickback, one query beats many, Bernstein-Vazirani |
+| 7 | `07_Grovers_Search` | Amplitude amplification, oracle + diffuser, optimal iterations, scaling |
+| 8 | `08_Noise_and_Real_Hardware` | Noise models, depth vs error, transpiling to a device, the repetition code |
+
+Each module has learning objectives, "what to notice" callouts after every experiment,
+interactive sliders where they help, exercises with hidden solutions, and key takeaways.
+
+## Setup
+
+Requires Python 3.13 and [uv](https://docs.astral.sh/uv/).
+
+```bash
+uv sync                                                           # creates .venv with every dependency
+uv run python -m ipykernel install --user --name quantum_computing
+jupyter lab src/                                                  # then pick the quantum_computing kernel
+```
+
+Notebooks ship with outputs, so you can read them on GitHub without running anything.
+To run them yourself, open any module and use *Run All*.
+
+## Stack
+
+- **qiskit** 2.x for circuits, state vectors, operators and transpilation
+- **qiskit-aer** for the `AerSimulator` backend and noise models
+- **matplotlib** + **pylatexenc** + **sympy** for circuit diagrams, histograms, Bloch spheres and LaTeX states
+- **ipywidgets** for the interactive sliders
+
+## Editing the course
+
+The notebooks are the source of truth: edit them directly in JupyterLab. If you add or reorder modules,
+keep the navigation links at the top and bottom of each notebook pointing at the right neighbours and at
+`00_Start_Here.ipynb`, and update the course map there and in this README.
