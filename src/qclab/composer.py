@@ -18,6 +18,9 @@ GATES = {
     "CCX (Toffoli)": ("ccx", 3, False),
 }
 
+# The most recently rendered composer circuit, so other labs (the Noise Dial) can reuse it.
+LAST_CIRCUIT = None
+
 
 def _ex_bell(qc):
     qc.h(0); qc.cx(0, 1)
@@ -201,6 +204,8 @@ class CircuitComposer:
         self._render()
 
     def _render(self):
+        global LAST_CIRCUIT
+        LAST_CIRCUIT = self.qc.copy()
         fig_circ, fig_state, fig_bloch, sv = self.figures(self.shots.value)
         show_in(self.circ_out, fig_circ)
         self.ket.value = "$$" + sv.draw("latex_source") + "$$"
