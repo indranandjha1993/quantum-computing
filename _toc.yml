@@ -1,0 +1,11 @@
+format: jb-book
+root: src/00_Start_Here
+chapters:
+- file: src/01_The_Qubit_and_Superposition
+- file: src/02_Quantum_Logic_Gates
+- file: src/03_Multiple_Qubits_and_Entanglement
+- file: src/04_Measurement_and_Interference
+- file: src/05_Quantum_Teleportation
+- file: src/06_Deutsch_Jozsa_Algorithm
+- file: src/07_Grovers_Search
+- file: src/08_Noise_and_Real_Hardware

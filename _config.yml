@@ -1,0 +1,26 @@
+title: Quantum Computing with Code
+author: Indra Nand Jha
+copyright: "2026"
+only_build_toc_files: true
+exclude_patterns: [.venv, _build, "**/.ipynb_checkpoints"]
+
+execute:
+  execute_notebooks: "off"
+
+repository:
+  url: https://github.com/indranandjha1993/quantum-computing
+  branch: main
+  path_to_book: .
+
+launch_buttons:
+  binderhub_url: https://mybinder.org
+  notebook_interface: jupyterlab
+
+html:
+  use_repository_button: true
+  use_issues_button: false
+  use_edit_page_button: false
+
+sphinx:
+  config:
+    html_show_copyright: false

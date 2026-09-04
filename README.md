@@ -1,9 +1,17 @@
 # Quantum Computing with Code
 
+[![Read online](https://img.shields.io/badge/read%20online-github%20pages-blue)](https://indranandjha1993.github.io/quantum-computing/) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/indranandjha1993/quantum-computing/main?urlpath=lab/tree/src/00_Start_Here.ipynb)
+
 A hands-on, nine-notebook course in quantum computing. Every idea is introduced three ways:
 as an **analogy**, as **maths**, and as **Qiskit code** you run, visualise and modify.
 Circuits are drawn, states are plotted on Bloch spheres, and everything is simulated with
 shot statistics on the Aer simulator, including a noisy simulated device in the final module.
+
+## Read or run it
+
+- **Read online:** https://indranandjha1993.github.io/quantum-computing/ is the full course as a website, built from these notebooks on every push.
+- **Run online:** the Binder badge above opens the notebooks in a live JupyterLab in your browser, labs included. The first launch after a change takes a few minutes while the image builds; later launches are quick.
+- **Run locally:** see Setup below.
 
 ## Course map
 
