@@ -82,3 +82,14 @@ To run them yourself, open any module and use *Run All*.
 The notebooks are the source of truth: edit them directly in JupyterLab. If you add or reorder modules,
 keep the navigation links at the top and bottom of each notebook pointing at the right neighbours and at
 `00_Start_Here.ipynb`, and update the course map there and in this README.
+
+## Related courses
+
+This is one of three hands-on notebook courses built in the same format:
+
+- [Data Structures and Algorithms](https://github.com/indranandjha1993/data-structures-algorithms): Big-O to dynamic programming, every claim measured
+- [Design Patterns](https://github.com/indranandjha1993/design-patterns): the 23 Gang of Four patterns and the architectures they live in
+
+## License
+
+MIT. Use it, fork it, teach with it.
