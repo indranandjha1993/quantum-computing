@@ -27,7 +27,7 @@ interactive sliders where they help, exercises with hidden solutions, and key ta
 
 ## Interactive labs
 
-Four simulators live in `src/qclab/` and are wired into the modules. Each needs a running kernel; when the
+Eight simulators live in `src/qclab/` and are wired into the modules. Each needs a running kernel; when the
 notebooks are viewed statically they show a preview of the initial state instead.
 
 | Lab | Used in | What you do |
@@ -35,14 +35,23 @@ notebooks are viewed statically they show a preview of the initial state instead
 | Bloch Sphere Lab | Modules 1, 2 | Press gates and watch the arrow move along its rotation path. Shows amplitudes, angles, the running matrix, and fidelity to an optional target. |
 | Circuit Composer | Start Here, Modules 2, 3 | Build circuits on 1 to 4 qubits from a gate menu. Live drawing, phase-coloured amplitudes, sampled histogram, per-qubit purity and Bloch arrows. Example circuits included. |
 | Guess the State | Modules 1, 4 | A hidden qubit and a shot budget. Measure in Z, X or Y, then guess the state. Easy mode uses the six axis states, hard mode any point on the sphere. |
+| Bell Test Lab | Module 3 | Choose a two-qubit state and four measurement angles. Live correlation curves and a CHSH gauge that only entangled states push past 2. |
+| Teleportation Walkthrough | Module 5 | Step through the five stages with Bloch spheres, Alice's random bits, and Bob's fidelity at each step. |
+| Grover Stepper | Module 7 | Step or auto-play through iterations: amplitude bars plus the rotating-arrow picture with both reflections drawn. |
+| Noise Dial | Module 8 | Sliders for one-qubit, two-qubit and readout error. Ideal vs noisy histograms and a fidelity readout for Bell, GHZ, Grover, a CNOT chain, or your own composer circuit. |
 | Checkpoint quiz | every module | Four questions per module with instant feedback and explanations. |
 
 ```python
 from qclab import bloch_lab, circuit_composer, guess_the_state, quiz
+from qclab import bell_test_lab, grover_stepper, teleport_walkthrough, noise_dial
 bloch_lab(target='-')                      # reach |-> from |0>
 circuit_composer(3, example='ghz')
 guess_the_state('hard', budget=300)
 quiz(4)
+bell_test_lab()
+grover_stepper(4, '0110')
+teleport_walkthrough()
+noise_dial()
 ```
 
 The import works because Jupyter starts a notebook's kernel in the notebook's own folder. If you run a notebook
